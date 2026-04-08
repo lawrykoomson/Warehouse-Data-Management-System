@@ -1,0 +1,81 @@
+product_code,product_name,category,supplier_name,warehouse_location,quantity_on_hand,quantity_reserved,quantity_available,reorder_point,reorder_quantity,max_stock_level,stock_value_ghs,stock_status
+PRD0040,Gas Cooker,Home & Furniture,Epsilon Merchants,Zone A,719,58,661,64,256,972,1432442.13,OK
+PRD0059,Measuring Tape Box,Industrial Supplies,Nu Wholesale Ltd.,Cold Storage,766,72,694,66,324,1459,1408313.98,OK
+PRD0041,Paracetamol Box,Health & Pharma,Tema Port Traders,Zone B,738,24,714,70,161,1913,1378473.3,OK
+PRD0080,Farm Boots Pair,Agriculture,Xi Supplies Accra,Cold Storage,781,69,712,78,333,886,1206402.89,OK
+PRD0026,Plain Fabric Roll,Clothing & Apparel,Xi Supplies Accra,Zone E,700,76,624,45,389,1211,1200367.0,OK
+PRD0012,Cooking Oil 25L,Food & Beverage,Delta Wholesale GH,Zone B,765,94,671,99,408,1499,1175307.75,OK
+PRD0039,Water Dispenser,Home & Furniture,Pacific Ghana Imports,Zone C,566,67,499,74,317,1177,1052454.36,OK
+PRD0003,Tablet,Electronics,Delta Wholesale GH,Overflow,609,40,569,86,413,1373,1050123.06,OK
+PRD0029,Hard Hat,Clothing & Apparel,Accra Trading Co.,Cold Storage,470,90,380,49,322,1568,926327.7,OK
+PRD0045,Hand Sanitizer Case,Health & Pharma,West Africa Distributors,Overflow,566,37,529,46,426,710,843334.34,OK
+PRD0014,Flour 50kg,Food & Beverage,Pi Merchants Ghana,Zone E,695,51,644,51,339,1774,756027.95,OK
+PRD0010,UPS Unit,Electronics,Nu Wholesale Ltd.,Zone D,430,49,381,32,491,1279,695486.3,OK
+PRD0005,Keyboard,Electronics,Eastern Regional Traders,Cold Storage,769,31,738,65,492,1492,677365.96,OK
+PRD0033,Office Desk,Home & Furniture,Gamma Distributors,Zone B,344,3,341,93,266,1498,633094.16,OK
+PRD0034,Filing Cabinet,Home & Furniture,GhanaTech Imports,Zone C,363,33,330,73,243,1936,619154.58,OK
+PRD0004,Monitor,Electronics,Omicron Trading Co.,Zone C,561,57,504,50,480,1421,607675.2,OK
+PRD0066,Folders Pack,Stationery & Office,Pi Merchants Ghana,Cold Storage,328,85,243,43,182,1343,530339.92,OK
+PRD0030,Gloves Pack,Clothing & Apparel,Iota Goods Limited,Zone D,276,78,198,98,496,1452,528675.24,OK
+PRD0006,Mouse,Electronics,Ashanti Wholesale,Zone C,244,35,209,86,139,980,474418.96,OK
+PRD0064,Staplers Box,Stationery & Office,Pacific Ghana Imports,Zone D,531,83,448,86,242,1698,469435.86,OK
+PRD0035,Mattress Single,Home & Furniture,Volta River Merchants,Cold Storage,569,1,568,96,197,994,466284.12,OK
+PRD0007,Printer,Electronics,Xi Supplies Accra,Zone B,343,40,303,99,141,808,431524.87,OK
+PRD0025,Ankara Fabric Roll,Clothing & Apparel,Capital City Goods,Overflow,707,80,627,61,152,1117,404064.64,OK
+PRD0038,Fan Ceiling,Home & Furniture,Volta River Merchants,Zone D,708,31,677,69,439,1255,386511.36,OK
+PRD0043,Surgical Gloves Box,Health & Pharma,Mu Trading Ghana,Zone B,289,12,277,54,251,1239,379997.43,OK
+PRD0067,Markers Box,Stationery & Office,Northern Suppliers Ghana,Zone D,507,36,471,81,489,575,375768.12,OK
+PRD0047,Thermometer Box,Health & Pharma,Ashanti Wholesale,Zone D,188,6,182,62,344,633,340763.16,OK
+PRD0069,Envelopes Pack,Stationery & Office,Gamma Distributors,Zone B,526,0,526,99,336,611,332631.88,OK
+PRD0037,Fan Standing,Home & Furniture,Gamma Distributors,Zone D,502,57,445,32,147,953,324497.82,OK
+PRD0061,A4 Paper Ream,Stationery & Office,Ashanti Wholesale,Zone C,448,10,438,35,321,1736,320440.96,OK
+PRD0008,Scanner,Electronics,Tema Port Traders,Zone D,392,88,304,49,461,631,298057.2,OK
+PRD0057,Power Drill,Industrial Supplies,Xi Supplies Accra,Zone B,202,54,148,44,378,1826,298032.82,OK
+PRD0075,Irrigation Hose Roll,Agriculture,Eastern Regional Traders,Zone E,279,53,226,91,341,1435,290324.61,OK
+PRD0048,Bandages Box,Health & Pharma,Nu Wholesale Ltd.,Zone C,503,9,494,36,177,1652,285618.49,OK
+PRD0009,Router,Electronics,Zeta Importers Ghana,Zone B,417,42,375,99,338,627,275983.11,OK
+PRD0065,Paper Clips Box,Stationery & Office,Epsilon Merchants,Zone C,650,62,588,41,340,1336,257634.0,OK
+PRD0031,Plastic Chairs Set,Home & Furniture,Beta Trading Ltd.,Zone C,748,75,673,64,265,677,244222.0,OVERSTOCKED
+PRD0017,Milo 500g,Food & Beverage,Delta Wholesale GH,Overflow,465,41,424,73,489,1069,221167.95,OK
+PRD0022,Women Dresses Pack,Clothing & Apparel,Premium Goods GH,Cold Storage,262,98,164,77,185,1743,218502.76,OK
+PRD0074,Tomato Seeds Pack,Agriculture,Mu Trading Ghana,Cold Storage,120,82,38,49,355,1542,216520.8,OK
+PRD0058,Angle Grinder,Industrial Supplies,West Africa Distributors,Zone E,272,18,254,39,130,1129,211460.96,OK
+PRD0019,Salt 25kg,Food & Beverage,Volta River Merchants,Overflow,358,28,330,38,499,582,204554.04,OK
+PRD0018,Tea Bags Box,Food & Beverage,Kumasi Supplies Ltd.,Zone A,431,32,399,40,340,1604,203992.3,OK
+PRD0056,Screws Assorted,Industrial Supplies,Accra Trading Co.,Cold Storage,464,9,455,59,235,1707,174060.32,OK
+PRD0042,Amoxicillin Box,Health & Pharma,Capital City Goods,Zone E,196,27,169,91,241,1574,173971.56,OK
+PRD0001,Smartphone,Electronics,Xi Supplies Accra,Overflow,712,66,646,89,125,1010,168822.32,OK
+PRD0024,School Uniforms,Clothing & Apparel,West Africa Distributors,Zone E,319,73,246,78,303,655,163436.46,OK
+PRD0023,Children Wear Pack,Clothing & Apparel,Eta Supplies Co.,Zone A,735,14,721,50,259,1685,157929.45,OK
+PRD0050,ORS Sachets Box,Health & Pharma,Accra Trading Co.,Zone C,633,28,605,96,294,1406,152875.83,OK
+PRD0013,Sugar 50kg,Food & Beverage,Capital City Goods,Cold Storage,279,55,224,92,114,1188,152001.99,OK
+PRD0070,Stamps Pad Box,Stationery & Office,Delta Wholesale GH,Zone B,530,46,484,93,420,605,144175.9,OK
+PRD0060,Safety Goggles Box,Industrial Supplies,Theta Trading House,Zone D,311,89,222,81,239,1605,125146.4,OK
+PRD0016,Sardines Case,Food & Beverage,Alpha Supplies Accra,Zone B,472,23,449,36,233,1170,122526.48,OK
+PRD0053,PVC Pipes Bundle,Industrial Supplies,Northern Suppliers Ghana,Zone B,83,20,63,60,188,653,113750.67,OK
+PRD0021,Men Shirts Pack,Clothing & Apparel,Mu Trading Ghana,Cold Storage,129,60,69,44,388,1452,106551.42,OK
+PRD0071,Fertilizer 50kg,Agriculture,Omicron Trading Co.,Zone D,273,70,203,46,247,1930,99527.61,OK
+PRD0002,Laptop,Electronics,GhanaTech Imports,Zone E,124,58,66,47,337,1587,96948.16,OK
+PRD0052,Iron Rods Bundle,Industrial Supplies,Tema Port Traders,Cold Storage,757,12,745,56,420,1041,77834.74,OK
+PRD0072,Pesticide 5L,Agriculture,Accra Trading Co.,Zone E,124,3,121,60,463,1136,77087.08,OK
+PRD0079,Watering Can,Agriculture,Inland Logistics Ghana,Zone E,152,57,95,98,347,1180,76469.68,OK
+PRD0063,Notebooks Pack,Stationery & Office,Ashanti Wholesale,Zone D,783,86,697,64,395,858,74972.25,OK
+PRD0076,Hand Sprayer,Agriculture,Lambda Distributors,Overflow,148,49,99,54,406,779,71785.92,OK
+PRD0044,Face Masks Box,Health & Pharma,Theta Trading House,Zone A,309,1,308,98,164,593,69555.9,OK
+PRD0032,Dining Table,Home & Furniture,Delta Wholesale GH,Zone D,461,31,430,89,391,1868,64862.7,OK
+PRD0068,Correction Fluid Box,Stationery & Office,Zeta Importers Ghana,Overflow,90,40,50,62,265,1327,57739.5,OK
+PRD0051,Cement Bags Pallet,Industrial Supplies,Delta Wholesale GH,Zone E,602,54,548,69,391,623,54986.68,OK
+PRD0020,Bottled Water Case,Food & Beverage,Pi Merchants Ghana,Zone B,31,15,16,55,110,812,54780.72,REORDER NOW
+PRD0015,Tomato Paste Case,Food & Beverage,Inland Logistics Ghana,Zone B,27,12,15,33,142,1377,53740.8,REORDER NOW
+PRD0036,Mattress Double,Home & Furniture,Zeta Importers Ghana,Cold Storage,416,62,354,60,453,1822,41055.04,OK
+PRD0077,Cutlass Dozen,Agriculture,Kumasi Supplies Ltd.,Overflow,71,35,36,83,274,1047,35840.09,REORDER NOW
+PRD0049,Antiseptic 5L,Health & Pharma,Ashanti Wholesale,Zone E,87,31,56,45,385,1741,29573.91,OK
+PRD0027,Work Boots Pair,Clothing & Apparel,Nu Wholesale Ltd.,Zone C,438,84,354,77,135,1826,21558.36,OK
+PRD0062,Ballpoint Pens Box,Stationery & Office,Delta Wholesale GH,Zone A,26,2,24,59,445,1702,17567.68,REORDER NOW
+PRD0055,Nails 5kg,Industrial Supplies,Pi Merchants Ghana,Overflow,33,14,19,66,461,1939,16128.42,REORDER NOW
+PRD0073,Maize Seeds 10kg,Agriculture,Pacific Ghana Imports,Zone D,14,8,6,82,147,732,13169.52,REORDER NOW
+PRD0028,Safety Vest,Clothing & Apparel,Beta Trading Ltd.,Cold Storage,12,6,6,92,154,1241,11677.08,REORDER NOW
+PRD0046,BP Monitor,Health & Pharma,Iota Goods Limited,Zone C,12,9,3,66,340,1402,8386.8,REORDER NOW
+PRD0054,Paint 20L,Industrial Supplies,Omicron Trading Co.,Zone C,2,1,1,87,452,1462,3503.86,REORDER NOW
+PRD0078,Hoe Dozen,Agriculture,Omicron Trading Co.,Zone D,2,1,1,68,400,1851,2533.88,REORDER NOW
+PRD0011,Rice 50kg,Food & Beverage,GhanaTech Imports,Zone E,6,2,4,68,485,1358,1137.54,REORDER NOW

@@ -1,0 +1,12 @@
+product_code,product_name,category,supplier_name,warehouse_location,quantity_on_hand,quantity_reserved,quantity_available,reorder_point,reorder_quantity,max_stock_level,stock_value_ghs,stock_status
+PRD0020,Bottled Water Case,Food & Beverage,Pi Merchants Ghana,Zone B,31,15,16,55,110,812,54780.72,REORDER NOW
+PRD0015,Tomato Paste Case,Food & Beverage,Inland Logistics Ghana,Zone B,27,12,15,33,142,1377,53740.8,REORDER NOW
+PRD0077,Cutlass Dozen,Agriculture,Kumasi Supplies Ltd.,Overflow,71,35,36,83,274,1047,35840.09,REORDER NOW
+PRD0062,Ballpoint Pens Box,Stationery & Office,Delta Wholesale GH,Zone A,26,2,24,59,445,1702,17567.68,REORDER NOW
+PRD0055,Nails 5kg,Industrial Supplies,Pi Merchants Ghana,Overflow,33,14,19,66,461,1939,16128.42,REORDER NOW
+PRD0073,Maize Seeds 10kg,Agriculture,Pacific Ghana Imports,Zone D,14,8,6,82,147,732,13169.52,REORDER NOW
+PRD0028,Safety Vest,Clothing & Apparel,Beta Trading Ltd.,Cold Storage,12,6,6,92,154,1241,11677.08,REORDER NOW
+PRD0046,BP Monitor,Health & Pharma,Iota Goods Limited,Zone C,12,9,3,66,340,1402,8386.8,REORDER NOW
+PRD0054,Paint 20L,Industrial Supplies,Omicron Trading Co.,Zone C,2,1,1,87,452,1462,3503.86,REORDER NOW
+PRD0078,Hoe Dozen,Agriculture,Omicron Trading Co.,Zone D,2,1,1,68,400,1851,2533.88,REORDER NOW
+PRD0011,Rice 50kg,Food & Beverage,GhanaTech Imports,Zone E,6,2,4,68,485,1358,1137.54,REORDER NOW

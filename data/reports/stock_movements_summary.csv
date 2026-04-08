@@ -1,0 +1,6 @@
+movement_type,total_movements,total_units_moved,avg_quantity
+ISSUE,280,29261,104.5
+RECEIPT,271,26290,97.0
+ADJUSTMENT,166,16702,100.6
+RETURN,158,16121,102.0
+TRANSFER,125,14056,112.4
