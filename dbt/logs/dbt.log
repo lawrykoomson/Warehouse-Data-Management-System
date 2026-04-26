@@ -1,0 +1,1089 @@
+[0m00:16:04.916092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8CDD14490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8CDD144D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8CDD16810>]}
+
+
+============================== 00:16:04.948381 | 9cd96947-d824-4c53-b650-2994bb7dfaeb ==============================
+[0m00:16:04.948381 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:16:04.956698 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug --profiles-dir .', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DELL\\Documents\\Warehouse-Data-Management-System\\dbt\\logs'}
+[0m00:16:05.292005 [info ] [MainThread]: dbt version: 1.11.8
+[0m00:16:05.292005 [info ] [MainThread]: python version: 3.11.9
+[0m00:16:05.292005 [info ] [MainThread]: python path: C:\Users\DELL\Documents\Warehouse-Data-Management-System\venv\Scripts\python.exe
+[0m00:16:05.292005 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m00:16:05.909018 [info ] [MainThread]: Using profiles dir at .
+[0m00:16:05.909018 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m00:16:05.909018 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\dbt_project.yml
+[0m00:16:05.917083 [info ] [MainThread]: adapter type: postgres
+[0m00:16:05.925245 [info ] [MainThread]: adapter version: 1.10.0
+[0m00:16:06.122646 [info ] [MainThread]: Configuration:
+[0m00:16:06.122646 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:16:06.126589 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:16:06.126589 [info ] [MainThread]: Required dependencies:
+[0m00:16:06.126589 [debug] [MainThread]: Executing "git --help"
+[0m00:16:06.498289 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:16:06.500037 [debug] [MainThread]: STDERR: "b''"
+[0m00:16:06.502305 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:16:06.503956 [info ] [MainThread]: Connection:
+[0m00:16:06.506206 [info ] [MainThread]:   host: localhost
+[0m00:16:06.507339 [info ] [MainThread]:   port: 5432
+[0m00:16:06.510687 [info ] [MainThread]:   user: postgres
+[0m00:16:06.512397 [info ] [MainThread]:   database: warehouse_db
+[0m00:16:06.512397 [info ] [MainThread]:   schema: warehouse_dw
+[0m00:16:06.514690 [info ] [MainThread]:   connect_timeout: 10
+[0m00:16:06.515251 [info ] [MainThread]:   role: None
+[0m00:16:06.515251 [info ] [MainThread]:   search_path: None
+[0m00:16:06.517775 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:16:06.517775 [info ] [MainThread]:   sslmode: None
+[0m00:16:06.517775 [info ] [MainThread]:   sslcert: None
+[0m00:16:06.517775 [info ] [MainThread]:   sslkey: None
+[0m00:16:06.517775 [info ] [MainThread]:   sslrootcert: None
+[0m00:16:06.525994 [info ] [MainThread]:   application_name: dbt
+[0m00:16:06.528009 [info ] [MainThread]:   retries: 1
+[0m00:16:06.528009 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:16:08.706361 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:16:09.389194 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:16:09.389194 [debug] [MainThread]: On debug: select 1 as id
+[0m00:16:09.397441 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:16:09.536797 [debug] [MainThread]: SQL status: SELECT 1 in 0.144 seconds
+[0m00:16:09.536797 [debug] [MainThread]: On debug: Close
+[0m00:16:09.536797 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:16:09.536797 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:16:09.545237 [debug] [MainThread]: Command `dbt debug` succeeded at 00:16:09.545237 after 4.96 seconds
+[0m00:16:09.545237 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:16:09.545237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8C6F91090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8CEF84910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8CEF76ED0>]}
+[0m00:16:09.545237 [debug] [MainThread]: Flushing usage events
+[0m00:16:15.517525 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:17:35.648403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B398984AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39897EB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B398984610>]}
+
+
+============================== 00:17:35.656651 | 0a4a040e-84a7-492e-a286-62cdbf21e707 ==============================
+[0m00:17:35.656651 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:17:35.658659 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DELL\\Documents\\Warehouse-Data-Management-System\\dbt\\logs'}
+[0m00:17:37.709287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39816FDD0>]}
+[0m00:17:37.784836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39512BED0>]}
+[0m00:17:37.867083 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:17:39.165594 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:17:39.165594 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m00:17:39.168138 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B399B88F90>]}
+[0m00:17:40.846946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B399BCDDD0>]}
+[0m00:17:41.750356 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\manifest.json
+[0m00:17:41.758414 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\semantic_manifest.json
+[0m00:17:41.881285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A138F90>]}
+[0m00:17:41.886738 [info ] [MainThread]: Found 5 models, 4 data tests, 5 sources, 465 macros
+[0m00:17:41.891010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B399A5D050>]}
+[0m00:17:41.899566 [info ] [MainThread]: 
+[0m00:17:41.901699 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:17:41.903412 [info ] [MainThread]: 
+[0m00:17:41.905937 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:17:41.916845 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db'
+[0m00:17:41.916845 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db'
+[0m00:17:42.141374 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db"
+[0m00:17:42.141374 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db"
+[0m00:17:42.149762 [debug] [ThreadPool]: On list_warehouse_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:17:42.149762 [debug] [ThreadPool]: On list_warehouse_db: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:17:42.149762 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:42.149762 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:43.241540 [debug] [ThreadPool]: SQL status: SELECT 5 in 1.090 seconds
+[0m00:17:43.241540 [debug] [ThreadPool]: SQL status: SELECT 5 in 1.092 seconds
+[0m00:17:43.241540 [debug] [ThreadPool]: On list_warehouse_db: Close
+[0m00:17:43.241540 [debug] [ThreadPool]: On list_warehouse_db: Close
+[0m00:17:43.241540 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse_db, now create_warehouse_db_warehouse_dw_marts)
+[0m00:17:43.249705 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_warehouse_db, now create_warehouse_db_warehouse_dw_staging)
+[0m00:17:43.249705 [debug] [ThreadPool]: Creating schema "database: "warehouse_db"
+schema: "warehouse_dw_marts"
+"
+[0m00:17:43.253195 [debug] [ThreadPool]: Creating schema "database: "warehouse_db"
+schema: "warehouse_dw_staging"
+"
+[0m00:17:43.257950 [debug] [ThreadPool]: Using postgres connection "create_warehouse_db_warehouse_dw_marts"
+[0m00:17:43.257950 [debug] [ThreadPool]: Using postgres connection "create_warehouse_db_warehouse_dw_staging"
+[0m00:17:43.257950 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "create_warehouse_db_warehouse_dw_marts"} */
+create schema if not exists "warehouse_dw_marts"
+[0m00:17:43.257950 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "create_warehouse_db_warehouse_dw_staging"} */
+create schema if not exists "warehouse_dw_staging"
+[0m00:17:43.257950 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:17:43.266305 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:17:43.448350 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.188 seconds
+[0m00:17:43.448350 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.187 seconds
+[0m00:17:43.456533 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_marts: COMMIT
+[0m00:17:43.456533 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_staging: COMMIT
+[0m00:17:43.460490 [debug] [ThreadPool]: Using postgres connection "create_warehouse_db_warehouse_dw_marts"
+[0m00:17:43.460490 [debug] [ThreadPool]: Using postgres connection "create_warehouse_db_warehouse_dw_staging"
+[0m00:17:43.460490 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_marts: COMMIT
+[0m00:17:43.460490 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_staging: COMMIT
+[0m00:17:43.464903 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m00:17:43.464903 [debug] [ThreadPool]: SQL status: COMMIT in 0.003 seconds
+[0m00:17:43.471407 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_marts: Close
+[0m00:17:43.471407 [debug] [ThreadPool]: On create_warehouse_db_warehouse_dw_staging: Close
+[0m00:17:43.473158 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db_warehouse_dw_marts'
+[0m00:17:43.489511 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db_warehouse_dw_staging'
+[0m00:17:43.489511 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db_warehouse_dw_marts"
+[0m00:17:43.497852 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db_warehouse_dw_staging"
+[0m00:17:43.497852 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db_warehouse_dw_marts"} */
+select
+      'warehouse_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse_dw_marts'
+    union all
+    select
+      'warehouse_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse_dw_marts'
+    union all
+    select
+      'warehouse_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse_dw_marts'
+  
+[0m00:17:43.497852 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db_warehouse_dw_staging"} */
+select
+      'warehouse_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse_dw_staging'
+    union all
+    select
+      'warehouse_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse_dw_staging'
+    union all
+    select
+      'warehouse_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse_dw_staging'
+  
+[0m00:17:43.506013 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:43.506013 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:17:44.548509 [debug] [ThreadPool]: SQL status: SELECT 0 in 1.048 seconds
+[0m00:17:44.548509 [debug] [ThreadPool]: SQL status: SELECT 0 in 1.047 seconds
+[0m00:17:44.548509 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: ROLLBACK
+[0m00:17:44.556532 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: ROLLBACK
+[0m00:17:44.556532 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: Close
+[0m00:17:44.556532 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: Close
+[0m00:17:44.580612 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:44.582623 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:17:44.584636 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:17:44.776718 [debug] [MainThread]: SQL status: SELECT 0 in 0.193 seconds
+[0m00:17:44.776718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A32DCD0>]}
+[0m00:17:44.776718 [debug] [MainThread]: On master: ROLLBACK
+[0m00:17:44.776718 [debug] [MainThread]: On master: COMMIT
+[0m00:17:44.776718 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:44.776718 [debug] [MainThread]: On master: COMMIT
+[0m00:17:44.776718 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:17:44.785021 [debug] [MainThread]: On master: Close
+[0m00:17:44.809630 [debug] [Thread-1 (]: Began running node model.warehouse_analytics.mart_purchase_orders
+[0m00:17:44.809630 [debug] [Thread-2 (]: Began running node model.warehouse_analytics.mart_stock_movements
+[0m00:17:44.809630 [debug] [Thread-3 (]: Began running node model.warehouse_analytics.stg_inventory
+[0m00:17:44.809630 [info ] [Thread-1 (]: 1 of 5 START sql table model warehouse_dw_marts.mart_purchase_orders ........... [RUN]
+[0m00:17:44.809630 [info ] [Thread-2 (]: 2 of 5 START sql table model warehouse_dw_marts.mart_stock_movements ........... [RUN]
+[0m00:17:44.817823 [info ] [Thread-3 (]: 3 of 5 START sql view model warehouse_dw_staging.stg_inventory ................. [RUN]
+[0m00:17:44.817823 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.warehouse_analytics.mart_purchase_orders'
+[0m00:17:44.817823 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.warehouse_analytics.mart_stock_movements'
+[0m00:17:44.817823 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.warehouse_analytics.stg_inventory'
+[0m00:17:44.817823 [debug] [Thread-1 (]: Began compiling node model.warehouse_analytics.mart_purchase_orders
+[0m00:17:44.817823 [debug] [Thread-2 (]: Began compiling node model.warehouse_analytics.mart_stock_movements
+[0m00:17:44.817823 [debug] [Thread-3 (]: Began compiling node model.warehouse_analytics.stg_inventory
+[0m00:17:44.834424 [debug] [Thread-1 (]: Writing injected SQL for node "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:44.834424 [debug] [Thread-2 (]: Writing injected SQL for node "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:44.842468 [debug] [Thread-3 (]: Writing injected SQL for node "model.warehouse_analytics.stg_inventory"
+[0m00:17:44.852137 [debug] [Thread-3 (]: Began executing node model.warehouse_analytics.stg_inventory
+[0m00:17:44.857043 [debug] [Thread-1 (]: Began executing node model.warehouse_analytics.mart_purchase_orders
+[0m00:17:44.857043 [debug] [Thread-2 (]: Began executing node model.warehouse_analytics.mart_stock_movements
+[0m00:17:44.912238 [debug] [Thread-3 (]: Writing runtime sql for node "model.warehouse_analytics.stg_inventory"
+[0m00:17:44.940697 [debug] [Thread-1 (]: Writing runtime sql for node "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:44.940697 [debug] [Thread-2 (]: Writing runtime sql for node "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:44.950754 [debug] [Thread-3 (]: Using postgres connection "model.warehouse_analytics.stg_inventory"
+[0m00:17:44.961075 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:44.961075 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.stg_inventory"} */
+
+  create view "warehouse_db"."warehouse_dw_staging"."stg_inventory__dbt_tmp"
+    
+    
+  as (
+    /*
+  Staging Model: stg_inventory
+  ==============================
+  Joins inventory with products and suppliers to create
+  a complete view of current warehouse stock status.
+
+  Source: warehouse_dw (5 tables)
+  Author: Lawrence Koomson
+*/
+
+with products as (
+    select * from "warehouse_db"."warehouse_dw"."products"
+),
+
+suppliers as (
+    select * from "warehouse_db"."warehouse_dw"."suppliers"
+),
+
+inventory as (
+    select * from "warehouse_db"."warehouse_dw"."inventory"
+),
+
+joined as (
+
+    select
+        i.inventory_id,
+        i.product_id,
+        p.product_name,
+        p.category,
+        p.unit_of_measure,
+        p.unit_cost_ghs,
+        p.unit_price_ghs,
+        p.reorder_point,
+        p.reorder_qty,
+
+        s.supplier_id,
+        s.supplier_name,
+        s.region                                        as supplier_region,
+        s.rating                                        as supplier_rating,
+
+        i.quantity_on_hand,
+        i.quantity_reserved,
+        i.quantity_available,
+        i.warehouse_location,
+        i.last_counted_date,
+        i.needs_reorder,
+        i.updated_at,
+
+        round(i.quantity_on_hand * p.unit_cost_ghs, 2) as stock_value_ghs,
+        round(i.quantity_on_hand * p.unit_price_ghs, 2) as stock_retail_value_ghs,
+
+        case
+            when i.quantity_on_hand = 0            then 'Out of Stock'
+            when i.needs_reorder                   then 'Low Stock'
+            when i.quantity_on_hand < p.reorder_point * 2 then 'Adequate'
+            else 'Well Stocked'
+        end                                             as stock_status,
+
+        case
+            when p.unit_price_ghs > 0
+            then round((p.unit_price_ghs - p.unit_cost_ghs) / p.unit_price_ghs * 100, 2)
+            else 0
+        end                                             as margin_pct
+
+    from inventory i
+    join products p  on i.product_id  = p.product_id
+    join suppliers s on p.supplier_id = s.supplier_id
+    where p.is_active = true
+
+)
+
+select * from joined
+  );
+[0m00:17:44.965444 [debug] [Thread-1 (]: Using postgres connection "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:44.970023 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_stock_movements"} */
+
+  
+    
+
+  create  table "warehouse_db"."warehouse_dw_marts"."mart_stock_movements__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+  Mart Model: mart_stock_movements
+  ===================================
+  Aggregates stock movement activity by type and product category.
+  Powers movement analysis in Power BI.
+
+  Author: Lawrence Koomson
+*/
+
+with movements as (
+    select * from "warehouse_db"."warehouse_dw"."stock_movements"
+),
+
+products as (
+    select product_id, category, product_name
+    from "warehouse_db"."warehouse_dw"."products"
+),
+
+joined as (
+
+    select
+        m.movement_id,
+        m.product_id,
+        p.product_name,
+        p.category,
+        m.movement_type,
+        m.quantity,
+        m.unit_cost_ghs,
+        m.total_value_ghs,
+        m.reference_no,
+        m.movement_date,
+        date_trunc('month', m.movement_date)            as movement_month
+
+    from movements m
+    join products p on m.product_id = p.product_id
+
+),
+
+aggregated as (
+
+    select
+        category,
+        movement_type,
+        date_trunc('month', movement_date)::date        as movement_month,
+
+        count(movement_id)                              as total_movements,
+        sum(quantity)                                   as total_quantity,
+        round(sum(total_value_ghs), 2)                  as total_value_ghs,
+        round(avg(total_value_ghs), 2)                  as avg_movement_value_ghs,
+        round(avg(quantity), 1)                         as avg_quantity_per_movement
+
+    from joined
+    group by category, movement_type, date_trunc('month', movement_date)::date
+
+)
+
+select * from aggregated
+order by movement_month, total_value_ghs desc
+  );
+  
+[0m00:17:44.970023 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:17:44.975247 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_purchase_orders"} */
+
+  
+    
+
+  create  table "warehouse_db"."warehouse_dw_marts"."mart_purchase_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+  Mart Model: mart_purchase_orders
+  ===================================
+  Aggregates purchase order KPIs by status and supplier.
+  Powers procurement dashboard in Power BI.
+
+  Author: Lawrence Koomson
+*/
+
+with orders as (
+    select * from "warehouse_db"."warehouse_dw"."purchase_orders"
+),
+
+suppliers as (
+    select supplier_id, supplier_name, region, rating
+    from "warehouse_db"."warehouse_dw"."suppliers"
+),
+
+products as (
+    select product_id, product_name, category
+    from "warehouse_db"."warehouse_dw"."products"
+),
+
+joined as (
+
+    select
+        o.po_id,
+        o.status,
+        o.order_date,
+        o.expected_date,
+        o.received_date,
+        o.quantity_ordered,
+        o.unit_cost_ghs,
+        o.total_cost_ghs,
+
+        s.supplier_name,
+        s.region,
+        s.rating                                        as supplier_rating,
+
+        p.product_name,
+        p.category,
+
+        case
+            when o.received_date is not null and o.expected_date is not null
+            then o.received_date - o.expected_date
+            else null
+        end                                             as delivery_delay_days,
+
+        case
+            when o.status = 'RECEIVED'  then 'On Time'
+            when o.status = 'CANCELLED' then 'Cancelled'
+            when o.expected_date < current_date
+                 and o.status not in ('RECEIVED','CANCELLED')
+            then 'Overdue'
+            else 'In Progress'
+        end                                             as delivery_status
+
+    from orders o
+    join suppliers s on o.supplier_id = s.supplier_id
+    join products  p on o.product_id  = p.product_id
+
+)
+
+select * from joined
+order by order_date desc
+  );
+  
+[0m00:17:44.975247 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:17:44.975247 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:17:45.133172 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.159 seconds
+[0m00:17:45.153142 [debug] [Thread-2 (]: SQL status: SELECT 260 in 0.176 seconds
+[0m00:17:45.153142 [debug] [Thread-1 (]: SQL status: SELECT 150 in 0.175 seconds
+[0m00:17:45.153142 [debug] [Thread-3 (]: Using postgres connection "model.warehouse_analytics.stg_inventory"
+[0m00:17:45.169359 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:45.171370 [debug] [Thread-1 (]: Using postgres connection "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:45.175323 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.stg_inventory"} */
+alter table "warehouse_db"."warehouse_dw_staging"."stg_inventory__dbt_tmp" rename to "stg_inventory"
+[0m00:17:45.175323 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_stock_movements"} */
+alter table "warehouse_db"."warehouse_dw_marts"."mart_stock_movements__dbt_tmp" rename to "mart_stock_movements"
+[0m00:17:45.177842 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_purchase_orders"} */
+alter table "warehouse_db"."warehouse_dw_marts"."mart_purchase_orders__dbt_tmp" rename to "mart_purchase_orders"
+[0m00:17:45.283670 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.105 seconds
+[0m00:17:45.283670 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.107 seconds
+[0m00:17:45.283670 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.108 seconds
+[0m00:17:45.308508 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: COMMIT
+[0m00:17:45.317210 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: COMMIT
+[0m00:17:45.318982 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: COMMIT
+[0m00:17:45.320144 [debug] [Thread-1 (]: Using postgres connection "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:45.320724 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:45.321303 [debug] [Thread-3 (]: Using postgres connection "model.warehouse_analytics.stg_inventory"
+[0m00:17:45.321886 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: COMMIT
+[0m00:17:45.322466 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: COMMIT
+[0m00:17:45.323628 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: COMMIT
+[0m00:17:45.420291 [debug] [Thread-1 (]: SQL status: COMMIT in 0.096 seconds
+[0m00:17:45.420291 [debug] [Thread-2 (]: SQL status: COMMIT in 0.097 seconds
+[0m00:17:45.420291 [debug] [Thread-3 (]: SQL status: COMMIT in 0.098 seconds
+[0m00:17:45.428569 [debug] [Thread-1 (]: Applying DROP to: "warehouse_db"."warehouse_dw_marts"."mart_purchase_orders__dbt_backup"
+[0m00:17:45.428569 [debug] [Thread-2 (]: Applying DROP to: "warehouse_db"."warehouse_dw_marts"."mart_stock_movements__dbt_backup"
+[0m00:17:45.436864 [debug] [Thread-3 (]: Applying DROP to: "warehouse_db"."warehouse_dw_staging"."stg_inventory__dbt_backup"
+[0m00:17:45.445157 [debug] [Thread-1 (]: Using postgres connection "model.warehouse_analytics.mart_purchase_orders"
+[0m00:17:45.445157 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_stock_movements"
+[0m00:17:45.453210 [debug] [Thread-3 (]: Using postgres connection "model.warehouse_analytics.stg_inventory"
+[0m00:17:45.453210 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_purchase_orders"} */
+drop table if exists "warehouse_db"."warehouse_dw_marts"."mart_purchase_orders__dbt_backup" cascade
+[0m00:17:45.453210 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_stock_movements"} */
+drop table if exists "warehouse_db"."warehouse_dw_marts"."mart_stock_movements__dbt_backup" cascade
+[0m00:17:45.456344 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.stg_inventory"} */
+drop view if exists "warehouse_db"."warehouse_dw_staging"."stg_inventory__dbt_backup" cascade
+[0m00:17:45.465023 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.007 seconds
+[0m00:17:45.469608 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.014 seconds
+[0m00:17:45.475399 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.016 seconds
+[0m00:17:45.477747 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_stock_movements: Close
+[0m00:17:45.486098 [debug] [Thread-1 (]: On model.warehouse_analytics.mart_purchase_orders: Close
+[0m00:17:45.486098 [debug] [Thread-3 (]: On model.warehouse_analytics.stg_inventory: Close
+[0m00:17:45.620087 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B395210A50>]}
+[0m00:17:45.620087 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A80C110>]}
+[0m00:17:45.620087 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A80E890>]}
+[0m00:17:45.628855 [info ] [Thread-2 (]: 2 of 5 OK created sql table model warehouse_dw_marts.mart_stock_movements ...... [[32mSELECT 260[0m in 0.67s]
+[0m00:17:45.628855 [info ] [Thread-1 (]: 1 of 5 OK created sql table model warehouse_dw_marts.mart_purchase_orders ...... [[32mSELECT 150[0m in 0.68s]
+[0m00:17:45.628855 [info ] [Thread-3 (]: 3 of 5 OK created sql view model warehouse_dw_staging.stg_inventory ............ [[32mCREATE VIEW[0m in 0.68s]
+[0m00:17:45.636608 [debug] [Thread-2 (]: Finished running node model.warehouse_analytics.mart_stock_movements
+[0m00:17:45.636608 [debug] [Thread-1 (]: Finished running node model.warehouse_analytics.mart_purchase_orders
+[0m00:17:45.644689 [debug] [Thread-3 (]: Finished running node model.warehouse_analytics.stg_inventory
+[0m00:17:45.656829 [debug] [Thread-4 (]: Began running node model.warehouse_analytics.mart_inventory_status
+[0m00:17:45.660297 [debug] [Thread-2 (]: Began running node model.warehouse_analytics.mart_supplier_performance
+[0m00:17:45.660297 [info ] [Thread-4 (]: 4 of 5 START sql table model warehouse_dw_marts.mart_inventory_status .......... [RUN]
+[0m00:17:45.666037 [info ] [Thread-2 (]: 5 of 5 START sql table model warehouse_dw_marts.mart_supplier_performance ...... [RUN]
+[0m00:17:45.669859 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.warehouse_analytics.mart_inventory_status'
+[0m00:17:45.673703 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.warehouse_analytics.mart_stock_movements, now model.warehouse_analytics.mart_supplier_performance)
+[0m00:17:45.675717 [debug] [Thread-4 (]: Began compiling node model.warehouse_analytics.mart_inventory_status
+[0m00:17:45.677727 [debug] [Thread-2 (]: Began compiling node model.warehouse_analytics.mart_supplier_performance
+[0m00:17:45.688101 [debug] [Thread-2 (]: Writing injected SQL for node "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:45.692244 [debug] [Thread-4 (]: Writing injected SQL for node "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:45.790234 [debug] [Thread-2 (]: Began executing node model.warehouse_analytics.mart_supplier_performance
+[0m00:17:45.798254 [debug] [Thread-4 (]: Began executing node model.warehouse_analytics.mart_inventory_status
+[0m00:17:45.798254 [debug] [Thread-2 (]: Writing runtime sql for node "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:45.808321 [debug] [Thread-4 (]: Writing runtime sql for node "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:45.808321 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:45.814693 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_supplier_performance"} */
+
+  
+    
+
+  create  table "warehouse_db"."warehouse_dw_marts"."mart_supplier_performance__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+  Mart Model: mart_supplier_performance
+  =======================================
+  Aggregates supplier KPIs including order fulfillment
+  and inventory contribution.
+  Powers supplier analysis in Power BI.
+
+  Author: Lawrence Koomson
+*/
+
+with suppliers as (
+    select * from "warehouse_db"."warehouse_dw"."suppliers"
+),
+
+orders as (
+    select * from "warehouse_db"."warehouse_dw"."purchase_orders"
+),
+
+inventory as (
+    select * from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+),
+
+supplier_orders as (
+
+    select
+        s.supplier_id,
+        s.supplier_name,
+        s.region,
+        s.category,
+        s.rating,
+        s.is_active,
+
+        count(o.po_id)                                  as total_orders,
+        count(case when o.status = 'RECEIVED'
+                   then 1 end)                          as received_orders,
+        count(case when o.status = 'PENDING'
+                   then 1 end)                          as pending_orders,
+        count(case when o.status = 'CANCELLED'
+                   then 1 end)                          as cancelled_orders,
+
+        round(
+            count(case when o.status = 'RECEIVED' then 1 end)::numeric
+            / nullif(count(o.po_id), 0) * 100
+        , 2)                                            as fulfillment_rate_pct,
+
+        round(sum(o.total_cost_ghs), 2)                 as total_order_value_ghs,
+        round(avg(o.total_cost_ghs), 2)                 as avg_order_value_ghs,
+        round(avg(o.quantity_ordered), 1)               as avg_order_quantity
+
+    from suppliers s
+    left join orders o on s.supplier_id = o.supplier_id
+    group by
+        s.supplier_id, s.supplier_name, s.region,
+        s.category, s.rating, s.is_active
+
+),
+
+with_inventory as (
+
+    select
+        so.*,
+        count(inv.product_id)                           as products_supplied,
+        round(sum(inv.stock_value_ghs), 2)              as inventory_value_ghs
+
+    from supplier_orders so
+    left join inventory inv on so.supplier_id = inv.supplier_id
+    group by
+        so.supplier_id, so.supplier_name, so.region,
+        so.category, so.rating, so.is_active,
+        so.total_orders, so.received_orders, so.pending_orders,
+        so.cancelled_orders, so.fulfillment_rate_pct,
+        so.total_order_value_ghs, so.avg_order_value_ghs,
+        so.avg_order_quantity
+
+)
+
+select * from with_inventory
+order by fulfillment_rate_pct desc, total_order_value_ghs desc
+  );
+  
+[0m00:17:45.808321 [debug] [Thread-4 (]: Using postgres connection "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:45.816706 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m00:17:45.816706 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_inventory_status"} */
+
+  
+    
+
+  create  table "warehouse_db"."warehouse_dw_marts"."mart_inventory_status__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+  Mart Model: mart_inventory_status
+  ====================================
+  Aggregates inventory KPIs by category and stock status.
+  Powers inventory dashboard in Power BI.
+
+  Author: Lawrence Koomson
+*/
+
+with staged as (
+
+    select * from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+
+),
+
+inventory_status as (
+
+    select
+        category,
+        stock_status,
+
+        count(product_id)                               as product_count,
+        sum(quantity_on_hand)                           as total_units,
+        sum(quantity_available)                         as available_units,
+        sum(quantity_reserved)                          as reserved_units,
+
+        round(sum(stock_value_ghs), 2)                  as total_stock_value_ghs,
+        round(sum(stock_retail_value_ghs), 2)           as total_retail_value_ghs,
+        round(avg(margin_pct), 2)                       as avg_margin_pct,
+        round(avg(unit_cost_ghs), 2)                    as avg_unit_cost_ghs,
+
+        count(case when needs_reorder then 1 end)       as reorder_needed_count,
+
+        round(
+            sum(stock_value_ghs)
+            / sum(sum(stock_value_ghs)) over () * 100
+        , 2)                                            as value_share_pct
+
+    from staged
+    group by category, stock_status
+
+)
+
+select * from inventory_status
+order by total_stock_value_ghs desc
+  );
+  
+[0m00:17:45.816706 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m00:17:46.847839 [debug] [Thread-4 (]: SQL status: SELECT 18 in 1.029 seconds
+[0m00:17:46.866011 [debug] [Thread-4 (]: Using postgres connection "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:46.868025 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_inventory_status"} */
+alter table "warehouse_db"."warehouse_dw_marts"."mart_inventory_status__dbt_tmp" rename to "mart_inventory_status"
+[0m00:17:46.872059 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m00:17:46.879122 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: COMMIT
+[0m00:17:46.880137 [debug] [Thread-2 (]: SQL status: SELECT 30 in 1.064 seconds
+[0m00:17:46.882152 [debug] [Thread-4 (]: Using postgres connection "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:46.902516 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:46.906561 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: COMMIT
+[0m00:17:46.910602 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_supplier_performance"} */
+alter table "warehouse_db"."warehouse_dw_marts"."mart_supplier_performance__dbt_tmp" rename to "mart_supplier_performance"
+[0m00:17:46.914644 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:17:46.916662 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m00:17:46.926740 [debug] [Thread-4 (]: Applying DROP to: "warehouse_db"."warehouse_dw_marts"."mart_inventory_status__dbt_backup"
+[0m00:17:46.932788 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: COMMIT
+[0m00:17:46.936811 [debug] [Thread-4 (]: Using postgres connection "model.warehouse_analytics.mart_inventory_status"
+[0m00:17:46.938826 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:46.938826 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_inventory_status"} */
+drop table if exists "warehouse_db"."warehouse_dw_marts"."mart_inventory_status__dbt_backup" cascade
+[0m00:17:46.940841 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: COMMIT
+[0m00:17:46.944867 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m00:17:46.944867 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m00:17:46.961213 [debug] [Thread-4 (]: On model.warehouse_analytics.mart_inventory_status: Close
+[0m00:17:46.975387 [debug] [Thread-2 (]: Applying DROP to: "warehouse_db"."warehouse_dw_marts"."mart_supplier_performance__dbt_backup"
+[0m00:17:46.981445 [debug] [Thread-2 (]: Using postgres connection "model.warehouse_analytics.mart_supplier_performance"
+[0m00:17:46.983462 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A16BD90>]}
+[0m00:17:46.985477 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "model.warehouse_analytics.mart_supplier_performance"} */
+drop table if exists "warehouse_db"."warehouse_dw_marts"."mart_supplier_performance__dbt_backup" cascade
+[0m00:17:46.991525 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m00:17:46.995557 [debug] [Thread-2 (]: On model.warehouse_analytics.mart_supplier_performance: Close
+[0m00:17:46.987495 [info ] [Thread-4 (]: 4 of 5 OK created sql table model warehouse_dw_marts.mart_inventory_status ..... [[32mSELECT 18[0m in 1.31s]
+[0m00:17:46.997568 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0a4a040e-84a7-492e-a286-62cdbf21e707', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B39A80FF10>]}
+[0m00:17:46.999581 [debug] [Thread-4 (]: Finished running node model.warehouse_analytics.mart_inventory_status
+[0m00:17:47.001595 [info ] [Thread-2 (]: 5 of 5 OK created sql table model warehouse_dw_marts.mart_supplier_performance . [[32mSELECT 30[0m in 1.32s]
+[0m00:17:47.028044 [debug] [Thread-2 (]: Finished running node model.warehouse_analytics.mart_supplier_performance
+[0m00:17:47.034092 [debug] [MainThread]: On master: COMMIT
+[0m00:17:47.038125 [debug] [MainThread]: Using postgres connection "master"
+[0m00:17:47.038125 [debug] [MainThread]: On master: COMMIT
+[0m00:17:47.040140 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:17:47.271278 [debug] [MainThread]: SQL status: COMMIT in 0.230 seconds
+[0m00:17:47.273287 [debug] [MainThread]: On master: Close
+[0m00:17:47.275298 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:17:47.275298 [debug] [MainThread]: Connection 'create_warehouse_db_warehouse_dw_staging' was properly closed.
+[0m00:17:47.277311 [debug] [MainThread]: Connection 'create_warehouse_db_warehouse_dw_marts' was properly closed.
+[0m00:17:47.277311 [debug] [MainThread]: Connection 'list_warehouse_db_warehouse_dw_marts' was properly closed.
+[0m00:17:47.279829 [debug] [MainThread]: Connection 'list_warehouse_db_warehouse_dw_staging' was properly closed.
+[0m00:17:47.279829 [debug] [MainThread]: Connection 'model.warehouse_analytics.mart_purchase_orders' was properly closed.
+[0m00:17:47.281839 [debug] [MainThread]: Connection 'model.warehouse_analytics.mart_supplier_performance' was properly closed.
+[0m00:17:47.289821 [debug] [MainThread]: Connection 'model.warehouse_analytics.stg_inventory' was properly closed.
+[0m00:17:47.296231 [debug] [MainThread]: Connection 'model.warehouse_analytics.mart_inventory_status' was properly closed.
+[0m00:17:47.298251 [info ] [MainThread]: 
+[0m00:17:47.312260 [info ] [MainThread]: Finished running 4 table models, 1 view model in 0 hours 0 minutes and 5.39 seconds (5.39s).
+[0m00:17:47.318302 [debug] [MainThread]: Command end result
+[0m00:17:47.552073 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\manifest.json
+[0m00:17:47.560204 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\semantic_manifest.json
+[0m00:17:48.113777 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\run_results.json
+[0m00:17:48.121944 [info ] [MainThread]: 
+[0m00:17:48.123984 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:17:48.123984 [info ] [MainThread]: 
+[0m00:17:48.130410 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m00:17:48.138204 [debug] [MainThread]: Command `dbt run` succeeded at 00:17:48.136190 after 13.84 seconds
+[0m00:17:48.142238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B391C31090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B391ECD550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B398644110>]}
+[0m00:17:48.144253 [debug] [MainThread]: Flushing usage events
+[0m00:17:50.249952 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:20:02.383617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1C248350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D297F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D2A8450>]}
+
+
+============================== 00:20:02.391723 | b5f41e39-a54d-4760-94c5-9bc46199cc80 ==============================
+[0m00:20:02.391723 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:20:02.391723 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\DELL\\Documents\\Warehouse-Data-Management-System\\dbt\\logs'}
+[0m00:20:02.624001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D297F10>]}
+[0m00:20:02.842009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1899FE50>]}
+[0m00:20:02.842009 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m00:20:03.342745 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m00:20:03.523806 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:20:03.531945 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:20:03.531945 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:20:03.582718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D89E990>]}
+[0m00:20:03.690599 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\manifest.json
+[0m00:20:03.694612 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\semantic_manifest.json
+[0m00:20:05.207078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D852710>]}
+[0m00:20:05.207078 [info ] [MainThread]: Found 5 models, 4 data tests, 5 sources, 465 macros
+[0m00:20:05.207078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1D869FD0>]}
+[0m00:20:05.207078 [info ] [MainThread]: 
+[0m00:20:05.207078 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m00:20:05.215525 [info ] [MainThread]: 
+[0m00:20:05.223268 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:20:05.247765 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db_warehouse_dw_marts'
+[0m00:20:05.264026 [debug] [ThreadPool]: Acquiring new postgres connection 'list_warehouse_db_warehouse_dw_staging'
+[0m00:20:05.402987 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db_warehouse_dw_marts"
+[0m00:20:05.402987 [debug] [ThreadPool]: Using postgres connection "list_warehouse_db_warehouse_dw_staging"
+[0m00:20:06.582891 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db_warehouse_dw_marts"} */
+select
+      'warehouse_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse_dw_marts'
+    union all
+    select
+      'warehouse_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse_dw_marts'
+    union all
+    select
+      'warehouse_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse_dw_marts'
+  
+[0m00:20:06.582891 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "list_warehouse_db_warehouse_dw_staging"} */
+select
+      'warehouse_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'warehouse_dw_staging'
+    union all
+    select
+      'warehouse_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'warehouse_dw_staging'
+    union all
+    select
+      'warehouse_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'warehouse_dw_staging'
+  
+[0m00:20:06.590816 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:06.590816 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:20:06.789794 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.197 seconds
+[0m00:20:06.790302 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.198 seconds
+[0m00:20:06.791926 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: ROLLBACK
+[0m00:20:06.793518 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: ROLLBACK
+[0m00:20:06.794576 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_staging: Close
+[0m00:20:06.795116 [debug] [ThreadPool]: On list_warehouse_db_warehouse_dw_marts: Close
+[0m00:20:06.829046 [debug] [MainThread]: Using postgres connection "master"
+[0m00:20:06.830765 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m00:20:06.831869 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:20:06.926665 [debug] [MainThread]: SQL status: SELECT 3 in 0.100 seconds
+[0m00:20:06.926665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5f41e39-a54d-4760-94c5-9bc46199cc80', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1DCA8550>]}
+[0m00:20:06.926665 [debug] [MainThread]: On master: ROLLBACK
+[0m00:20:06.935041 [debug] [MainThread]: On master: COMMIT
+[0m00:20:06.935041 [debug] [MainThread]: Using postgres connection "master"
+[0m00:20:06.935041 [debug] [MainThread]: On master: COMMIT
+[0m00:20:06.935041 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m00:20:06.935041 [debug] [MainThread]: On master: Close
+[0m00:20:06.943191 [debug] [Thread-1 (]: Began running node test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49
+[0m00:20:06.943191 [debug] [Thread-2 (]: Began running node test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a
+[0m00:20:06.943191 [debug] [Thread-3 (]: Began running node test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f
+[0m00:20:06.943191 [debug] [Thread-4 (]: Began running node test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2
+[0m00:20:06.943191 [info ] [Thread-1 (]: 1 of 4 START test not_null_stg_inventory_inventory_id .......................... [RUN]
+[0m00:20:06.943191 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_inventory_product_id ............................ [RUN]
+[0m00:20:06.951268 [info ] [Thread-3 (]: 3 of 4 START test not_null_stg_inventory_stock_value_ghs ....................... [RUN]
+[0m00:20:06.952779 [info ] [Thread-4 (]: 4 of 4 START test unique_stg_inventory_inventory_id ............................ [RUN]
+[0m00:20:06.952779 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49'
+[0m00:20:06.952779 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a'
+[0m00:20:06.952779 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f'
+[0m00:20:06.952779 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2'
+[0m00:20:06.967895 [debug] [Thread-1 (]: Began compiling node test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49
+[0m00:20:06.973972 [debug] [Thread-2 (]: Began compiling node test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a
+[0m00:20:06.976012 [debug] [Thread-3 (]: Began compiling node test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f
+[0m00:20:06.976012 [debug] [Thread-4 (]: Began compiling node test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2
+[0m00:20:07.009121 [debug] [Thread-1 (]: Writing injected SQL for node "test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49"
+[0m00:20:07.021213 [debug] [Thread-2 (]: Writing injected SQL for node "test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a"
+[0m00:20:07.025430 [debug] [Thread-3 (]: Writing injected SQL for node "test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f"
+[0m00:20:07.033444 [debug] [Thread-4 (]: Writing injected SQL for node "test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2"
+[0m00:20:08.166788 [debug] [Thread-2 (]: Began executing node test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a
+[0m00:20:08.168791 [debug] [Thread-1 (]: Began executing node test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49
+[0m00:20:08.168791 [debug] [Thread-4 (]: Began executing node test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2
+[0m00:20:08.168791 [debug] [Thread-3 (]: Began executing node test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f
+[0m00:20:08.210494 [debug] [Thread-2 (]: Writing runtime sql for node "test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a"
+[0m00:20:08.210494 [debug] [Thread-1 (]: Writing runtime sql for node "test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49"
+[0m00:20:08.218247 [debug] [Thread-4 (]: Writing runtime sql for node "test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2"
+[0m00:20:08.221108 [debug] [Thread-3 (]: Writing runtime sql for node "test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f"
+[0m00:20:08.227829 [debug] [Thread-2 (]: Using postgres connection "test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a"
+[0m00:20:08.227829 [debug] [Thread-1 (]: Using postgres connection "test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49"
+[0m00:20:08.232936 [debug] [Thread-2 (]: On test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select product_id
+from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+where product_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m00:20:08.232936 [debug] [Thread-4 (]: Using postgres connection "test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2"
+[0m00:20:08.232936 [debug] [Thread-3 (]: Using postgres connection "test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f"
+[0m00:20:08.232936 [debug] [Thread-1 (]: On test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select inventory_id
+from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+where inventory_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m00:20:08.232936 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:20:08.232936 [debug] [Thread-4 (]: On test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    inventory_id as unique_field,
+    count(*) as n_records
+
+from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+where inventory_id is not null
+group by inventory_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m00:20:08.232936 [debug] [Thread-3 (]: On test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f: /* {"app": "dbt", "dbt_version": "1.11.8", "profile_name": "warehouse_analytics", "target_name": "dev", "node_id": "test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select stock_value_ghs
+from "warehouse_db"."warehouse_dw_staging"."stg_inventory"
+where stock_value_ghs is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m00:20:08.232936 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:20:08.232936 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m00:20:08.232936 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m00:20:08.402834 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.164 seconds
+[0m00:20:08.413307 [debug] [Thread-2 (]: On test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a: ROLLBACK
+[0m00:20:08.421497 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.184 seconds
+[0m00:20:08.424988 [debug] [Thread-2 (]: On test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a: Close
+[0m00:20:08.424988 [debug] [Thread-1 (]: On test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49: ROLLBACK
+[0m00:20:08.429686 [info ] [Thread-2 (]: 2 of 4 PASS not_null_stg_inventory_product_id .................................. [[32mPASS[0m in 1.47s]
+[0m00:20:08.429686 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.192 seconds
+[0m00:20:08.429686 [debug] [Thread-1 (]: On test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49: Close
+[0m00:20:08.429686 [debug] [Thread-2 (]: Finished running node test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a
+[0m00:20:08.435432 [debug] [Thread-4 (]: On test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2: ROLLBACK
+[0m00:20:08.435432 [info ] [Thread-1 (]: 1 of 4 PASS not_null_stg_inventory_inventory_id ................................ [[32mPASS[0m in 1.48s]
+[0m00:20:08.437898 [debug] [Thread-4 (]: On test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2: Close
+[0m00:20:08.437898 [debug] [Thread-1 (]: Finished running node test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49
+[0m00:20:08.437898 [info ] [Thread-4 (]: 4 of 4 PASS unique_stg_inventory_inventory_id .................................. [[32mPASS[0m in 1.49s]
+[0m00:20:08.437898 [debug] [Thread-4 (]: Finished running node test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2
+[0m00:20:09.585385 [debug] [Thread-3 (]: SQL status: SELECT 1 in 1.345 seconds
+[0m00:20:09.589665 [debug] [Thread-3 (]: On test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f: ROLLBACK
+[0m00:20:09.589665 [debug] [Thread-3 (]: On test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f: Close
+[0m00:20:09.591681 [info ] [Thread-3 (]: 3 of 4 PASS not_null_stg_inventory_stock_value_ghs ............................. [[32mPASS[0m in 2.64s]
+[0m00:20:09.593437 [debug] [Thread-3 (]: Finished running node test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f
+[0m00:20:09.597114 [debug] [MainThread]: On master: COMMIT
+[0m00:20:09.597114 [debug] [MainThread]: Using postgres connection "master"
+[0m00:20:09.597114 [debug] [MainThread]: On master: COMMIT
+[0m00:20:09.597114 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:20:09.659526 [debug] [MainThread]: SQL status: COMMIT in 0.059 seconds
+[0m00:20:09.659526 [debug] [MainThread]: On master: Close
+[0m00:20:09.661534 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:20:09.661534 [debug] [MainThread]: Connection 'list_warehouse_db_warehouse_dw_marts' was properly closed.
+[0m00:20:09.661534 [debug] [MainThread]: Connection 'list_warehouse_db_warehouse_dw_staging' was properly closed.
+[0m00:20:09.663542 [debug] [MainThread]: Connection 'test.warehouse_analytics.not_null_stg_inventory_inventory_id.9da0f57d49' was properly closed.
+[0m00:20:09.663542 [debug] [MainThread]: Connection 'test.warehouse_analytics.not_null_stg_inventory_product_id.065830936a' was properly closed.
+[0m00:20:09.663542 [debug] [MainThread]: Connection 'test.warehouse_analytics.not_null_stg_inventory_stock_value_ghs.df2acd264f' was properly closed.
+[0m00:20:09.665550 [debug] [MainThread]: Connection 'test.warehouse_analytics.unique_stg_inventory_inventory_id.d5ed1f93d2' was properly closed.
+[0m00:20:09.665550 [info ] [MainThread]: 
+[0m00:20:09.665550 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 4.44 seconds (4.44s).
+[0m00:20:09.667563 [debug] [MainThread]: Command end result
+[0m00:20:09.709032 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\manifest.json
+[0m00:20:09.709032 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\semantic_manifest.json
+[0m00:20:09.717454 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\DELL\Documents\Warehouse-Data-Management-System\dbt\target\run_results.json
+[0m00:20:09.717454 [info ] [MainThread]: 
+[0m00:20:09.717454 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:20:09.717454 [info ] [MainThread]: 
+[0m00:20:09.717454 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m00:20:09.725507 [debug] [MainThread]: Command `dbt test` succeeded at 00:20:09.725507 after 7.49 seconds
+[0m00:20:09.727550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D15441090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D156DD550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020D1BF04110>]}
+[0m00:20:09.727550 [debug] [MainThread]: Flushing usage events
+[0m00:20:12.949335 [debug] [MainThread]: An error was encountered while trying to flush usage events

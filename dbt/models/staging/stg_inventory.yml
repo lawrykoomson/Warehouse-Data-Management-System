@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: warehouse_dw
+    database: warehouse_db
+    schema: warehouse_dw
+    tables:
+      - name: inventory
+        description: "Current warehouse inventory levels"
+      - name: products
+        description: "Product master data"
+      - name: suppliers
+        description: "Supplier master data"
+      - name: stock_movements
+        description: "All stock in/out movements"
+      - name: purchase_orders
+        description: "Supplier purchase orders"
+
+models:
+  - name: stg_inventory
+    description: "Joined inventory view with product and supplier details"
+    columns:
+      - name: inventory_id
+        description: "Unique inventory record ID"
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: "Product identifier"
+        tests:
+          - not_null
+      - name: stock_value_ghs
+        description: "Current stock value in GHS"
+        tests:
+          - not_null
