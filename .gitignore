@@ -2,6 +2,13 @@ venv/
 .env
 __pycache__/
 *.pyc
+*.log
+warehouse.log
+kafka_warehouse.log
+dbt/profiles.yml
+dbt/logs/
+dbt/.user.yml
+dbt/target/
 data/processed/
 data/raw/
-warehouse.log
+data/reports/
